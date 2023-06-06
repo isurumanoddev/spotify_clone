@@ -1,12 +1,15 @@
 import React from 'react';
 import "./Player.css"
+import {useStateValue} from "./StateProvider";
 
-function Player({image}) {
+function Player() {
+    const [{user},dispatch ] = useStateValue()
+
 
     return (
         <div>
-            <h1>Home</h1>
-           <h2>Hello {image} , Welcome to spotify</h2>
+
+           <h2>Hello  , Welcome to spotify</h2>
         </div>
     );
 }

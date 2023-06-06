@@ -5,14 +5,16 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    margin: 0 auto;
-    padding-top: 100px;
+    padding: 100px 0;
+
     background: black;
+    justify-content: space-between;
     gap: 4rem;
+
 }
 
 .login__logo {
-    width: 350px;
+    max-width: 350px;
     margin: 0 auto;
 }
 
@@ -28,24 +30,22 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-.login__button {
+.MuiButton-root {
 
-    padding: 15px 40px;
-    background-color: #1DB954;
-    color: white;
-    border: none;
-    border-radius: 99px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    transition: background-color 0.3s ease;
+    padding: 15px 40px!important;
+    background-color: #1DB954!important;
+    color: white!important;
+    border: none!important;
+    border-radius: 99px!important;
+    font-size: 16px!important;
+    font-weight: bold!important;
+    cursor: pointer!important;
+    text-transform: uppercase!important;
+    margin-bottom: 10px!important;
+
 }
 
-.login__button:hover {
-    background-color: #1ED760;
-}
+
 
 .login__google {
     width: 280px;

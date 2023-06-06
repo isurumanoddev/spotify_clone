@@ -1,15 +1,24 @@
 import React from 'react';
 import "./Player.css"
 import {useStateValue} from "./StateProvider";
+import Sidebar from "./Sidebar";
+import Body from "./Body";
+import Footer from "./Footer";
 
-function Player() {
+function Player({spotify}) {
     const [{user},dispatch ] = useStateValue()
 
 
     return (
-        <div>
+        <div className="player">
+            <div className="player__body">
+                <Sidebar/>
+                <Body/>
+            </div>
+            <div className="player__footer">
+                <Footer/>
+            </div>
 
-           <h2>Hello  , Welcome to spotify</h2>
         </div>
     );
 }

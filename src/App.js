@@ -3,6 +3,7 @@ import Login from "./Login";
 import {useEffect, useState} from "react";
 import {getTokenFromUrl} from "./Spotify";
 import SpotifyWebApi from "spotify-web-api-js";
+import Player from "./Player";
 
 
 const spotifyApi = new SpotifyWebApi()
@@ -10,6 +11,7 @@ const spotifyApi = new SpotifyWebApi()
 
 function App() {
     const [token,setToken] =useState(null)
+    const [user,setUser] =useState("")
 
     useEffect(() => {
         const hash = getTokenFromUrl();
@@ -21,7 +23,8 @@ function App() {
             spotifyApi.setAccessToken(_token);
             spotifyApi.getMe()
                 .then((user) => {
-                    console.log("user : ", user)
+
+                    setUser(user.display_name)
                 })
 
 
@@ -33,7 +36,7 @@ function App() {
     return (
         <div className="app">
 
-            {token ? <h1>Music Player</h1> :
+            {token ? <Player image={user}/> :
 
                 <Login/>
 

@@ -16,6 +16,7 @@
 }
 
 .footer__left {
+    justify-self: flex-start!important;
     flex: 0.3;
     display: flex;
     align-items: center;

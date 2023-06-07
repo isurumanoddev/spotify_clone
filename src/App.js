@@ -12,11 +12,12 @@ const spotifyApi = new SpotifyWebApi()
 
 function App() {
 
+
     const [{user,token}, dispatch] = useStateValue()
 
 
     console.log("💖",user)
-    console.log("❤",token)
+
 
 
 
@@ -33,6 +34,7 @@ function App() {
 
 
             spotifyApi.setAccessToken(_token);
+
             spotifyApi.getMe()
                 .then((user) => {
                     dispatch({
@@ -40,7 +42,18 @@ function App() {
                         user: user
                     })
 
+                });
+            spotifyApi.getUserPlaylists()
+                .then((playlists) => {
+                    dispatch({
+                        type:"SET_PLAYLIST",
+                        playlists:playlists,
+
+                    })
+
                 })
+
+
 
 
         }
@@ -51,12 +64,12 @@ function App() {
     return (
         <div className="app">
 
-            {/*{token ? <Player spotify={spotifyApi}/> :*/}
+            {token ? <Player spotify={spotifyApi}/> :
 
-            {/*    <Login/>*/}
+                <Login/>
 
-            {/*}*/}
-            <Player/>
+            }
+
 
         </div>
     );

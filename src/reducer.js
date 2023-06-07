@@ -3,11 +3,12 @@ export const initialState = {
     playlists: [],
     is_playing: false,
     item: null,
-    token:null
+    // token:null
+    token: "BQD6te8-5ekU1i-IzOYBw2C0sYYiv1rJ-xpzB9Zu_Y0rHFmLCZrvFAJpTUtMT8eIj4BYprIwArKP6FgSdbOmAA__hjTpa4lAkYeXLrPvOralOOzxbMAWBSoDqWNq9ZS5-owum3yZ8uxUueWRBfxQ70YkMbTTK7fO4WVvC7WW9rT6woI4_G87q9UhJAVZbPcZEGbsLfBiJcJ6Ly_taAtP"
 }
 
 const reducer = (state, action) => {
-    console.log("action : ", action)
+
     switch (action.type) {
         case "SET_USER":
             return {
@@ -18,6 +19,11 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 token: action.token
+            }
+        case "SET_PLAYLIST":
+            return {
+                ...state,
+                playlists: action.playlists,
             }
         default:
             return state

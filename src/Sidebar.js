@@ -2,9 +2,12 @@ import React from 'react';
 import "./Sidebar.css"
 import {Home, Search, LibraryMusic, PlaylistAdd, Favorite, ExpandMore} from "@mui/icons-material";
 import SidebarOption from "./SidebarOption";
+import {useStateValue} from "./StateProvider";
 
 
 function Sidebar() {
+    const [{playlists}, dispatch] = useStateValue()
+    console.log("playlists : ",playlists?.items)
     return (
         <div className="sidebar">
             <div className="logo">
@@ -18,10 +21,12 @@ function Sidebar() {
             </ul>
             <strong className="sidebar__title">PLAYLISTS</strong>
             <hr/>
-            <SidebarOption  title={"Home"}/>
-            <SidebarOption  title={"Home"}/>
-            <SidebarOption  title={"Home"}/>
-            <SidebarOption  title={"Home"}/>
+            {playlists?.items?.map(playlist =>(
+
+                <SidebarOption title={playlist.name}/>
+                )
+            )}
+
 
         </div>
     );

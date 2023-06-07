@@ -45,3 +45,29 @@
 .body__playlist__music {
 
 }
+.body .body__icons  {
+display: flex;
+    justify-content: space-between;
+    margin: 0 24px;
+    align-items: center;
+}
+.PlayCircleFilled {
+   color: #1DB954!important;
+    font-size: 4rem!important;
+    transition:all 0.2s !important ;
+}
+.PlayCircleFilled:hover {
+   transform: scale(1.05) !important;
+}
+.other {
+   color: gray!important;
+    font-size: 2rem!important;
+    transition: 0.2s ;
+}
+.other:hover {
+   color: white!important;
+
+}
+.body__songs {
+    margin: 20px;
+}

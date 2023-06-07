@@ -2,12 +2,12 @@ import React from 'react';
 import "./Body.css"
 import Header from "./Header";
 import {useStateValue} from "./StateProvider";
+import {Favorite, MoreHoriz, PlayCircleFilled} from "@mui/icons-material";
 
 
 function Body({spotify}) {
-    
-    const [{discover_weekly},dispatch] = useStateValue()
-    console.log("discover_weekly ",discover_weekly?.description)
+
+    const [{discover_weekly}, dispatch] = useStateValue()
 
 
 
@@ -15,7 +15,7 @@ function Body({spotify}) {
         <div className={"body"}>
             <Header/>
             <div className="body__info">
-                <img src="https://i.scdn.co/image/ab67706c0000da843b89f1e2ea2b75604a584ddf"
+                <img src={discover_weekly?.images[0].url}
                      alt=""/>
                 <div className="body__infoText">
                     <p className="body__infoText__1">Playlist</p>
@@ -28,6 +28,17 @@ function Body({spotify}) {
                 <div className="body__playlist__music">
                     <img src="" alt="" className="body__playlist__music__image"/>
                     <div className="body__playlist__music__info"></div>
+                </div>
+
+            </div>
+            <div className="body__songs">
+                <div className="body__icons">
+                    <PlayCircleFilled className="PlayCircleFilled"/>
+                    <div>
+                          <Favorite className="other"/>
+                    <MoreHoriz className="other"/>
+                    </div>
+
                 </div>
 
             </div>

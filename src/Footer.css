@@ -1,0 +1,120 @@
+.footer {
+  display: grid;
+
+  grid-template-columns: 2fr 2fr 1fr;
+   width: 100%;
+  padding: 16px;
+    background:rgba(255,255,255,0.1);
+bottom: 0;
+  position: fixed;
+  height: 11vh;
+
+
+}
+
+.footer__left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer__left-logo {
+  height: 32px;
+}
+
+.footer__left-song-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__left-song-title,
+.footer__left-artist-name {
+  margin: 0;
+  font-weight: bold;
+}
+
+.footer__center {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 16px;
+}
+
+.footer__center-player-controls {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.footer__center-control-button-large {
+   height: 50px!important;
+  width: 50px!important;
+  background-color: rgba(255,255,255,0.05)!important;
+  border: none;
+  color: #fff!important;
+  cursor: pointer;
+  transition: 200ms color ease-in!important;
+}
+.footer__center-control-button {
+  height: 35px!important;
+  width: 35px!important;
+  background-color: rgba(255,255,255,0.05)!important;
+  border: none;
+  color: #fff!important;
+  cursor: pointer;
+  transition: 200ms color ease-in!important;
+
+}
+
+.footer__center-control-button:hover {
+  color: #1ed760!important;
+}
+
+.footer__center-progress-bar {
+  flex-grow: 1;
+  height: 4px;
+  background-color: #535353;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.footer__center-progress-bar__progress {
+  height: 100%;
+  background-color: #1ed760;
+}
+
+.footer__right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer__right-volume-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer__right-volume-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.footer__right-volume-button:hover {
+  color: #1ed760;
+}
+
+.footer__right-volume-slider {
+  width: 80px;
+  height: 4px;
+  background-color: #535353;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.footer__right-volume-slider__progress {
+  height: 100%;
+  background-color: #1ed760;
+}

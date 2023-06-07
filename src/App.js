@@ -52,6 +52,17 @@ function App() {
                     })
 
                 })
+             spotifyApi.getPlaylist("37i9dQZF1DXdxcBWuJkbcy")
+                .then((playlist) => {
+
+                    dispatch({
+                        type:"SET_DISCOVER_WEEKLY",
+                        discover_weekly:playlist,
+
+                    })
+
+                })
+
 
 
 

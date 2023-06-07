@@ -1,16 +1,23 @@
 .player__body {
     display: flex;
-     background: linear-gradient(to bottom, #0d011a, #000000);
-     /*background: black;*/
+
+    /*background: black;*/
 
 }
-.player__footer {
-    height: 65px;
 
-    position: fixed;
-     bottom: 0;
-    width: 100%;
-    background: #282828;
+.player__footer {
+
+
+    /*max-height: 65px;*/
+bottom: 0;
+  position: fixed;
+
+
+
+
+
     color: white;
     margin-top: 4px;
+    align-items: center;
+
 }

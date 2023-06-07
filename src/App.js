@@ -51,11 +51,12 @@ function App() {
     return (
         <div className="app">
 
-            {token ? <Player spotify={spotifyApi}/> :
+            {/*{token ? <Player spotify={spotifyApi}/> :*/}
 
-                <Login/>
+            {/*    <Login/>*/}
 
-            }
+            {/*}*/}
+            <Player/>
 
         </div>
     );

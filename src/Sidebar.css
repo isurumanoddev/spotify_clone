@@ -25,32 +25,20 @@
 .menu-items {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+
+    margin-bottom: 16px;
 }
 
-.menu-item {
-  margin-bottom: 10px;
-  /*background-color: rgba(255, 255, 255, 0.2);*/
-  padding: 8px 6px;
-  display: flex;
-  gap: 16px;
-  opacity: 0.7;
-  color: white;
-  cursor: pointer;
-}
 
-.menu-item:hover {
-  opacity: 1;
-}
 
-.menu-item.active a {
-  color: #fff;
-}
 
-.menu-item a:hover {
-  color: #fff;
-}
+.sidebar__title {
+    padding: 0 10px;
+    font-size: 12px;
 
-.menu-item a i {
-  margin-right: 10px;
+}
+.sidebar hr {
+    border: 1px solid rgba(255,255,255,0.2);
+
+    margin: 10px auto;
 }

@@ -16,7 +16,7 @@ function Player({spotify}) {
                 <Body spotify={spotify}/>
             </div>
             <div className="player__footer">
-                <Footer/>
+                <Footer spotify={spotify}/>
             </div>
 
         </div>

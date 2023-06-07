@@ -74,20 +74,20 @@ function Footer({spotify}) {
                 <p className="footer__left-artist-name">Artist Name</p>
             </div>
         </div>
-        <div className="footer__center">
+        <div  className="footer__center">
 
 
             <IconButton className="footer__center-control-button">
                 <Shuffle/>
             </IconButton>
             <IconButton className="footer__center-control-button">
-                <SkipPrevious/>
+                <SkipPrevious onClick={skipPrevious}/>
             </IconButton>
             <IconButton className="footer__center-control-button-large">
-                <PlayArrow fontSize="large"/>
+                <PlayArrow onClick={handlePlayPause} fontSize="large"/>
             </IconButton>
             <IconButton className="footer__center-control-button">
-                <SkipNext/>
+                <SkipNext onClick={skipNext}/>
             </IconButton>
             <IconButton className="footer__center-control-button">
                 <Repeat/>

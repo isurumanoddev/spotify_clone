@@ -1,3 +1,5 @@
+
+
 .body {
 
     flex: 0.8;
@@ -9,7 +11,11 @@
       height: 87vh;
     padding:0 0;
     overflow: hidden;
+    overflow-y: scroll;
 
+}
+.body::-webkit-scrollbar {
+  display: none;
 }
 .body__info {
     display: flex;
@@ -19,6 +25,7 @@
     padding: 20px;
     border-radius: 5px;
 }
+
 
 .body__info img {
   width: 200px;
@@ -70,4 +77,6 @@ display: flex;
 }
 .body__songs {
     margin: 20px;
+    display: flex;
+    flex-direction: column!important;
 }

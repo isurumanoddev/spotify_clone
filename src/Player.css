@@ -9,15 +9,12 @@
 
 
     /*max-height: 65px;*/
-bottom: 0;
-  position: fixed;
-
-
-
+    bottom: 0;
+    position: fixed;
 
 
     color: white;
     margin-top: 4px;
-    align-items: center;
+
 
 }

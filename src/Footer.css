@@ -1,120 +1,109 @@
 .footer {
-  display: grid;
+    display: flex;
 
-  grid-template-columns: 2fr 2fr 1fr;
-   width: 100%;
-  padding: 16px;
-    background:rgba(255,255,255,0.1);
-bottom: 0;
-  position: fixed;
-  height: 11vh;
+
+    width: 100%;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    bottom: 0;
+    position: fixed;
+    height: 11vh;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
 
 
 }
 
 .footer__left {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+    flex: 0.3;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+
+
 }
 
 .footer__left-logo {
-  height: 32px;
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
 }
 
 .footer__left-song-info {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer__left-song-title,
 .footer__left-artist-name {
-  margin: 0;
-  font-weight: bold;
+    margin: 0;
+    font-weight: bold;
+}
+.footer__left-artist-name {
+    font-size: 12px;
 }
 
 .footer__center {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-  margin: 0 16px;
+    flex: 0.4;
+    display: flex;
+    align-items: center;
+justify-content: center;
+
+
+    gap: 18px;
 }
 
-.footer__center-player-controls {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
+
+
 .footer__center-control-button-large {
-   height: 50px!important;
-  width: 50px!important;
-  background-color: rgba(255,255,255,0.05)!important;
-  border: none;
-  color: #fff!important;
-  cursor: pointer;
-  transition: 200ms color ease-in!important;
+    height: 50px !important;
+    width: 50px !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: none;
+    color: #fff !important;
+    cursor: pointer;
+    transition: 200ms color ease-in !important;
 }
+
 .footer__center-control-button {
-  height: 35px!important;
-  width: 35px!important;
-  background-color: rgba(255,255,255,0.05)!important;
-  border: none;
-  color: #fff!important;
-  cursor: pointer;
-  transition: 200ms color ease-in!important;
+    height: 35px !important;
+    width: 35px !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: none;
+    color: #fff !important;
+    cursor: pointer;
+    transition: 200ms color ease-in !important;
 
 }
 
 .footer__center-control-button:hover {
-  color: #1ed760!important;
+    color: #1ed760 !important;
 }
 
-.footer__center-progress-bar {
-  flex-grow: 1;
-  height: 4px;
-  background-color: #535353;
-  border-radius: 2px;
-  overflow: hidden;
+.footer__center-control-button-large:hover {
+    color: #1ed760 !important;
 }
 
-.footer__center-progress-bar__progress {
-  height: 100%;
-  background-color: #1ed760;
-}
+
+
+
 
 .footer__right {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+      max-width: 300px;
+    flex: 0.3;
+    justify-content: center;
+
+
+}
+.footer__right__slider {
+    color: #1DB954!important;
 }
 
-.footer__right-volume-control {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
 
-.footer__right-volume-button {
-  background-color: transparent;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-size: 24px;
-}
 
-.footer__right-volume-button:hover {
-  color: #1ed760;
-}
 
-.footer__right-volume-slider {
-  width: 80px;
-  height: 4px;
-  background-color: #535353;
-  border-radius: 2px;
-  overflow: hidden;
-}
 
-.footer__right-volume-slider__progress {
-  height: 100%;
-  background-color: #1ed760;
-}
+
+

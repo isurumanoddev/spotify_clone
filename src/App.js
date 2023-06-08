@@ -7,18 +7,16 @@ import Player from "./Player";
 import {useStateValue} from "./StateProvider";
 
 
-const spotifyApi = new SpotifyWebApi()
+const spotifyAPI = new SpotifyWebApi()
 
 
 function App() {
 
 
-    const [{user,token}, dispatch] = useStateValue()
+    const [{user, token,spotify}, dispatch] = useStateValue()
 
 
-    console.log("💖",user)
-
-
+       console.log("spotify ",spotify);
 
 
     useEffect(() => {
@@ -27,15 +25,18 @@ function App() {
         window.location.hash = ""
 
         if (_token) {
+            spotifyAPI.setAccessToken(_token);
             dispatch({
-                type:"SET_Token",
-                token:_token,
+                type: "SET_Token",
+                token: _token,
             })
+            dispatch({
+                type: "SET_SPOTIFY",
+                spotify: spotifyAPI,
+            });
 
 
-            spotifyApi.setAccessToken(_token);
-
-            spotifyApi.getMe()
+            spotifyAPI.getMe()
                 .then((user) => {
                     dispatch({
                         type: "SET_USER",
@@ -43,28 +44,31 @@ function App() {
                     })
 
                 });
-            spotifyApi.getUserPlaylists()
+            spotifyAPI.getUserPlaylists()
                 .then((playlists) => {
                     dispatch({
-                        type:"SET_PLAYLIST",
-                        playlists:playlists,
+                        type: "SET_PLAYLIST",
+                        playlists: playlists,
 
                     })
 
                 })
-             spotifyApi.getPlaylist("37i9dQZF1DXdxcBWuJkbcy")
+            spotifyAPI.getPlaylist("37i9dQZF1DXdxcBWuJkbcy")
                 .then((playlist) => {
 
                     dispatch({
-                        type:"SET_DISCOVER_WEEKLY",
-                        discover_weekly:playlist,
+                        type: "SET_DISCOVER_WEEKLY",
+                        discover_weekly: playlist,
 
                     })
 
                 })
-
-
-
+            spotifyAPI.getMyTopArtists().then((response) =>
+                dispatch({
+                    type: "SET_TOP_ARTISTS",
+                    top_artists: response,
+                })
+            )
 
 
         }
@@ -75,7 +79,7 @@ function App() {
     return (
         <div className="app">
 
-            {token ? <Player spotify={spotifyApi}/> :
+            {token ? <Player spotify={spotify}/> :
 
                 <Login/>
 

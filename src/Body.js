@@ -8,9 +8,11 @@ import SongRow from "./SongRow";
 
 function Body({spotify}) {
 
+
     const [{discover_weekly}, dispatch] = useStateValue()
     const [darkNav, setDarkNav] = useState(true)
-    console.log("darkNav : ", darkNav)
+
+    console.log("discover_weekly?.tracks.items : ",discover_weekly?.tracks.items[0].track)
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -24,7 +26,7 @@ function Body({spotify}) {
     const playPlaylist = (id) => {
         spotify
             .play({
-                context_uri: `spotify:playlist:37i9dQZEVXcJZyENOWUFo7`,
+                context_uri: `spotify:playlist:37i9dQZF1DXdxcBWuJkbcy`,
             })
             .then((res) => {
                 spotify.getMyCurrentPlayingTrack().then((r) => {
@@ -80,14 +82,17 @@ function Body({spotify}) {
         </div>
         <div className="body__songs">
             <div className="body__icons">
-                <PlayCircleFilled  className="PlayCircleFilled"/>
+                <PlayCircleFilled className="PlayCircleFilled"/>
                 <div>
                     <Favorite className="other"/>
                     <MoreHoriz className="other"/>
                 </div>
 
             </div>
-            {discover_weekly?.tracks.items?.map(item => <SongRow playSong={playSong} track={item.track}/>)}
+            {discover_weekly?.tracks.items.map(item => (
+                <SongRow playSong={playSong} track={item.track}/>
+
+            ))}
 
         </div>
     </div>);

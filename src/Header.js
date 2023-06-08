@@ -11,7 +11,7 @@ function Header({spotify,darkNav}) {
 
 
     const [{user}, dispatch] = useStateValue()
-    console.log("user ❤️❤️❤️", user?.images[0]?.url)
+
     return (
         <div className={`header ${darkNav && "headerDark" }`}>
             <div className="header__left">
